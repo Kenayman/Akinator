@@ -18,7 +18,7 @@ public class Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interface2
      */
-    Arvore ar = new Arvore();
+    Arbol ar = new Arbol();
 
     public Interface() {
         initComponents();
@@ -68,7 +68,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         BtNao.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtNao.setText("Não");
+        BtNao.setText("No");
         BtNao.setEnabled(false);
         BtNao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +77,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         BtJogar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtJogar.setText("Jogar Novamente");
+        BtJogar.setText("Jugar Nuevamente");
         BtJogar.setEnabled(false);
         BtJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         BtSim.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtSim.setText("SIM");
+        BtSim.setText("Si");
         BtSim.setEnabled(false);
         BtSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

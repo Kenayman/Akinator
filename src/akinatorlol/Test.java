@@ -11,9 +11,9 @@ import java.lang.annotation.RetentionPolicy;
  *
  * @author Eduardo
  */
-public class Teste {
+public class Test {
     public static void main(String[] args) {
-        Arvore ar = new  Arvore();
+        Arbol ar = new  Arbol();
         ar.CriarArvore();
         System.out.println(ar.altura());
     }
