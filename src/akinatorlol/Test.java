@@ -14,7 +14,7 @@ import java.lang.annotation.RetentionPolicy;
 public class Test {
     public static void main(String[] args) {
         Arbol ar = new  Arbol();
-        ar.CriarArvore();
+        ar.CrearArbol();
         System.out.println(ar.altura());
     }
 }

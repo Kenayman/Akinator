@@ -23,10 +23,10 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        BtSim.setVisible(false);
-        BtNao.setVisible(false);
-        BtJogar.setVisible(false);
-        ar.CriarArvore();
+        BtnSi.setVisible(false);
+        BtnNo.setVisible(false);
+        BtnJugar.setVisible(false);
+        ar.CrearArbol();
         
         
     }
@@ -44,10 +44,10 @@ public class Interface extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         LPergunta = new javax.swing.JLabel();
         LImagem = new javax.swing.JLabel();
-        BtIniciar = new javax.swing.JButton();
-        BtNao = new javax.swing.JButton();
-        BtJogar = new javax.swing.JButton();
-        BtSim = new javax.swing.JButton();
+        BtnIniciar = new javax.swing.JButton();
+        BtnNo = new javax.swing.JButton();
+        BtnJugar = new javax.swing.JButton();
+        BtnSi = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,38 +59,38 @@ public class Interface extends javax.swing.JFrame {
         LPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LPergunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        BtIniciar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtIniciar.setText("INICIAR");
-        BtIniciar.addActionListener(new java.awt.event.ActionListener() {
+        BtnIniciar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnIniciar.setText("INICIAR");
+        BtnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtIniciarActionPerformed(evt);
+                BtnIniciarActionPerformed(evt);
             }
         });
 
-        BtNao.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtNao.setText("No");
-        BtNao.setEnabled(false);
-        BtNao.addActionListener(new java.awt.event.ActionListener() {
+        BtnNo.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnNo.setText("No");
+        BtnNo.setEnabled(false);
+        BtnNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtNaoActionPerformed(evt);
+                BtnNoActionPerformed(evt);
             }
         });
 
-        BtJogar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtJogar.setText("Jugar Nuevamente");
-        BtJogar.setEnabled(false);
-        BtJogar.addActionListener(new java.awt.event.ActionListener() {
+        BtnJugar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnJugar.setText("Jugar Nuevamente");
+        BtnJugar.setEnabled(false);
+        BtnJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtJogarActionPerformed(evt);
+                BtnJugarActionPerformed(evt);
             }
         });
 
-        BtSim.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        BtSim.setText("Si");
-        BtSim.setEnabled(false);
-        BtSim.addActionListener(new java.awt.event.ActionListener() {
+        BtnSi.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        BtnSi.setText("Si");
+        BtnSi.setEnabled(false);
+        BtnSi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtSimActionPerformed(evt);
+                BtnSiActionPerformed(evt);
             }
         });
 
@@ -103,13 +103,13 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtSim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(59, 59, 59)
-                        .addComponent(BtJogar)
+                        .addComponent(BtnJugar)
                         .addGap(308, 308, 308)
-                        .addComponent(BtNao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(346, 346, 346))
         );
@@ -122,10 +122,10 @@ public class Interface extends javax.swing.JFrame {
                 .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtSim, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtNao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -145,55 +145,55 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtIniciarActionPerformed
+    private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
         // TODO add your handling code here:
         ar.inicio();
-        BtSim.setEnabled(true);
-        BtSim.setVisible(true);
-        BtNao.setEnabled(true);
-        BtNao.setVisible(true);
-        BtIniciar.setEnabled(false);
-        BtIniciar.setVisible(false);
+        BtnSi.setEnabled(true);
+        BtnSi.setVisible(true);
+        BtnNo.setEnabled(true);
+        BtnNo.setVisible(true);
+        BtnIniciar.setEnabled(false);
+        BtnIniciar.setVisible(false);
         LPergunta.setText(ar.peguntas(ar.temp));
-    }//GEN-LAST:event_BtIniciarActionPerformed
+    }//GEN-LAST:event_BtnIniciarActionPerformed
 
-    private void BtSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtSimActionPerformed
+    private void BtnSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiActionPerformed
         // TODO add your handling code here:
         LPergunta.setText(ar.peguntas(ar.temp.getEsq()));
         if (ar.temp.getEsq() == null) {
-            BtSim.setEnabled(false);
-            BtSim.setVisible(false);
-            BtNao.setEnabled(false);
-            BtNao.setVisible(false);
-            BtJogar.setVisible(true);
-            BtJogar.setEnabled(true);
+            BtnSi.setEnabled(false);
+            BtnSi.setVisible(false);
+            BtnNo.setEnabled(false);
+            BtnNo.setVisible(false);
+            BtnJugar.setVisible(true);
+            BtnJugar.setEnabled(true);
             LImagem.setIcon(new javax.swing.ImageIcon("C:\\Users\\edrye\\Documents\\NetBeansProjects\\AkinatorLOL\\League\\"+ar.temp.getvalor+".jpg"));
         }
-    }//GEN-LAST:event_BtSimActionPerformed
+    }//GEN-LAST:event_BtnSiActionPerformed
 
-    private void BtNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtNaoActionPerformed
+    private void BtnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoActionPerformed
            // TODO add your handling code here:
         LPergunta.setText(ar.peguntas(ar.temp.getDir()));
         if (ar.temp.getDir() == null) {
-            BtSim.setEnabled(false);
-            BtSim.setVisible(false);
-            BtNao.setEnabled(false);
-            BtNao.setVisible(false);
-            BtJogar.setVisible(true);
-            BtJogar.setEnabled(true);
+            BtnSi.setEnabled(false);
+            BtnSi.setVisible(false);
+            BtnNo.setEnabled(false);
+            BtnNo.setVisible(false);
+            BtnJugar.setVisible(true);
+            BtnJugar.setEnabled(true);
             LImagem.setIcon(new javax.swing.ImageIcon("C:\\Users\\edrye\\Documents\\NetBeansProjects\\AkinatorLOL\\League\\"+ar.temp.getvalor+".jpg"));
         }
-    }//GEN-LAST:event_BtNaoActionPerformed
+    }//GEN-LAST:event_BtnNoActionPerformed
 
-    private void BtJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtJogarActionPerformed
+    private void BtnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnJugarActionPerformed
         // TODO add your handling code here:
-        BtIniciar.setEnabled(true);
-        BtIniciar.setVisible(true);
-        BtJogar.setVisible(false);
-        BtJogar.setEnabled(false);
+        BtnIniciar.setEnabled(true);
+        BtnIniciar.setVisible(true);
+        BtnJugar.setVisible(false);
+        BtnJugar.setEnabled(false);
         LPergunta.setText("");
         LImagem.setIcon(null);
-    }//GEN-LAST:event_BtJogarActionPerformed
+    }//GEN-LAST:event_BtnJugarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,10 +232,10 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtIniciar;
-    private javax.swing.JButton BtJogar;
-    private javax.swing.JButton BtNao;
-    private javax.swing.JButton BtSim;
+    private javax.swing.JButton BtnIniciar;
+    private javax.swing.JButton BtnJugar;
+    private javax.swing.JButton BtnNo;
+    private javax.swing.JButton BtnSi;
     private javax.swing.JLabel LImagem;
     private javax.swing.JLabel LPergunta;
     private javax.swing.JLabel jLabel1;

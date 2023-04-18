@@ -41,13 +41,13 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="BtSim" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="BtnSi" min="-2" pref="100" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="BtIniciar" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="BtnIniciar" min="-2" pref="100" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                          <Component id="BtJogar" min="-2" max="-2" attributes="0"/>
+                          <Component id="BtnJugar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
-                          <Component id="BtNao" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="BtnNo" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                       <Component id="LImagem" min="-2" pref="1215" max="-2" attributes="0"/>
                   </Group>
@@ -64,10 +64,10 @@
                   <Component id="LImagem" min="-2" pref="800" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BtIniciar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="BtSim" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="BtNao" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="BtJogar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnIniciar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnSi" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnNo" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="BtnJugar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -86,7 +86,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="LImagem">
         </Component>
-        <Component class="javax.swing.JButton" name="BtIniciar">
+        <Component class="javax.swing.JButton" name="BtnIniciar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
@@ -94,10 +94,10 @@
             <Property name="text" type="java.lang.String" value="INICIAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtIniciarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnIniciarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BtNao">
+        <Component class="javax.swing.JButton" name="BtnNo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
@@ -106,10 +106,10 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtNaoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnNoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BtJogar">
+        <Component class="javax.swing.JButton" name="BtnJugar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
@@ -118,10 +118,10 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtJogarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnJugarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BtSim">
+        <Component class="javax.swing.JButton" name="BtnSi">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="1"/>
@@ -130,7 +130,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtSimActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnSiActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
