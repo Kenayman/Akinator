@@ -1,32 +1,37 @@
 package akinatorlol;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import javafx.scene.layout.Background;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Eduardo
- */
+
 public class Interface extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Interface2
-     */
-    Arbol ar = new Arbol();
-
+    
+    Nodo nodo;
+    Conexion con;
+    Connection conn;
+    DBase db;
+    int actual = 1;
     public Interface() {
+        
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        nodo = new Nodo();
+        con=new Conexion();
+        db=new DBase();
+        conn=con.Conexion();
         BtnSi.setVisible(false);
         BtnNo.setVisible(false);
         BtnJugar.setVisible(false);
-        ar.CrearArbol();
+        LABEL_NOMBRE.setVisible(false);
+        LABEL_QUE_TIENE.setVisible(false);
+        LABEL_CARACTERISTICA.setVisible(false);
+        textoNombre.setVisible(false);
+        textoCaracteristica.setVisible(false);
+        botonAgregar.setVisible(false);
         
         
     }
@@ -48,6 +53,12 @@ public class Interface extends javax.swing.JFrame {
         BtnNo = new javax.swing.JButton();
         BtnJugar = new javax.swing.JButton();
         BtnSi = new javax.swing.JButton();
+        LABEL_NOMBRE = new javax.swing.JLabel();
+        LABEL_QUE_TIENE = new javax.swing.JLabel();
+        LABEL_CARACTERISTICA = new javax.swing.JLabel();
+        textoCaracteristica = new javax.swing.JTextField();
+        textoNombre = new javax.swing.JTextField();
+        botonAgregar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,6 +105,24 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        LABEL_NOMBRE.setText("Nombre del campeon");
+
+        LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga [NOMBRE DEL CAMPEON ADIVINADO]?");
+
+        LABEL_CARACTERISTICA.setText("Su personaje es...");
+
+        textoCaracteristica.setEnabled(false);
+
+        textoNombre.setEnabled(false);
+
+        botonAgregar.setText("Agregar");
+        botonAgregar.setEnabled(false);
+        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,16 +130,34 @@ public class Interface extends javax.swing.JFrame {
             .addComponent(LPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LABEL_QUE_TIENE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(LABEL_NOMBRE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(LABEL_CARACTERISTICA)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textoCaracteristica, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(421, 421, 421)
+                                        .addComponent(botonAgregar))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(454, 454, 454)
+                                .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(59, 59, 59)
                         .addComponent(BtnJugar)
                         .addGap(308, 308, 308)
-                        .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(346, 346, 346))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,8 +166,19 @@ public class Interface extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(LPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(LABEL_NOMBRE)
+                        .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LABEL_QUE_TIENE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LABEL_CARACTERISTICA)
+                    .addComponent(textoCaracteristica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAgregar))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,48 +203,37 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
-        // TODO add your handling code here:
-        ar.inicio();
-        BtnSi.setEnabled(true);
-        BtnSi.setVisible(true);
-        BtnNo.setEnabled(true);
-        BtnNo.setVisible(true);
-        BtnIniciar.setEnabled(false);
-        BtnIniciar.setVisible(false);
-        LPergunta.setText(ar.peguntas(ar.temp));
-    }//GEN-LAST:event_BtnIniciarActionPerformed
-
     private void BtnSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiActionPerformed
-        // TODO add your handling code here:
-        LPergunta.setText(ar.peguntas(ar.temp.getEsq()));
-        if (ar.temp.getEsq() == null) {
-            BtnSi.setEnabled(false);
-            BtnSi.setVisible(false);
-            BtnNo.setEnabled(false);
-            BtnNo.setVisible(false);
+        // TODO:
+        // -Guardar id del nodo izquierdo
+        // -Si es una pregunta, desplegarla y continuar
+        // -Si es un personaje, desplegar y preguntar si es el correcto
+        //   * Si es el correcto, preguntar si se quiere volver a jugar
+        //   * Si no, pedir datos y hacer INSERT en la db
+        if (nodo.getPregunta() == 0){
+            LPergunta.setText("wow que loco gane que crack queres jugar again");
             BtnJugar.setVisible(true);
             BtnJugar.setEnabled(true);
-            LImagem.setIcon(new javax.swing.ImageIcon("C:\\Users\\edrye\\Documents\\NetBeansProjects\\AkinatorLOL\\League\\"+ar.temp.getvalor+".jpg"));
+            BtnSi.setVisible(false);
+            BtnSi.setEnabled(false);
+            BtnNo.setVisible(false);
+            BtnNo.setEnabled(false);
+            actual = 1;
+        }
+        else{
+            try{
+                actual = actual * 2;
+                db.Select(conn, nodo, actual);
+                LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
+            }
+            catch(SQLException ex){
+
+            }
         }
     }//GEN-LAST:event_BtnSiActionPerformed
 
-    private void BtnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoActionPerformed
-           // TODO add your handling code here:
-        LPergunta.setText(ar.peguntas(ar.temp.getDir()));
-        if (ar.temp.getDir() == null) {
-            BtnSi.setEnabled(false);
-            BtnSi.setVisible(false);
-            BtnNo.setEnabled(false);
-            BtnNo.setVisible(false);
-            BtnJugar.setVisible(true);
-            BtnJugar.setEnabled(true);
-            LImagem.setIcon(new javax.swing.ImageIcon("C:\\Users\\edrye\\Documents\\NetBeansProjects\\AkinatorLOL\\League\\"+ar.temp.getvalor+".jpg"));
-        }
-    }//GEN-LAST:event_BtnNoActionPerformed
-
     private void BtnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnJugarActionPerformed
-        // TODO add your handling code here:
+        // Nada, creo
         BtnIniciar.setEnabled(true);
         BtnIniciar.setVisible(true);
         BtnJugar.setVisible(false);
@@ -194,6 +241,75 @@ public class Interface extends javax.swing.JFrame {
         LPergunta.setText("");
         LImagem.setIcon(null);
     }//GEN-LAST:event_BtnJugarActionPerformed
+
+    private void BtnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoActionPerformed
+        // TODO:
+        // -Lo mismo que en el BtnSiActionPerformed, pero con el nodo derecho
+        if (nodo.getPregunta() == 0){
+            LPergunta.setText("nopuedesir, mete el mono al db");
+            BtnSi.setVisible(false);
+            BtnSi.setEnabled(false);
+            BtnNo.setVisible(false);
+            BtnNo.setEnabled(false);
+            LABEL_NOMBRE.setVisible(true);
+            LABEL_QUE_TIENE.setVisible(true);
+            LABEL_CARACTERISTICA.setVisible(true);
+            textoNombre.setVisible(true);
+            textoCaracteristica.setVisible(true);
+            botonAgregar.setVisible(true);
+            textoNombre.setEnabled(true);
+            textoCaracteristica.setEnabled(true);
+            botonAgregar.setEnabled(true);
+            LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga " + nodo.getTexto() + "?");
+            //actual = 1;
+        }
+        else{
+            try{
+                actual = actual * 2 + 1;
+                db.Select(conn, nodo, actual);
+                LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
+            }
+            catch(SQLException ex){
+                
+            }
+        }
+    }//GEN-LAST:event_BtnNoActionPerformed
+
+    private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
+        // TODO:
+        // - Hacer SELECT en la db, desplegar y guardar su nodo
+        try{
+            BtnSi.setEnabled(true);
+            BtnSi.setVisible(true);
+            BtnNo.setEnabled(true);
+            BtnNo.setVisible(true);
+            BtnIniciar.setEnabled(false);
+            BtnIniciar.setVisible(false);
+            db.Select(conn, nodo, actual);
+            LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
+        }
+        catch(SQLException ex){
+
+        }
+    }//GEN-LAST:event_BtnIniciarActionPerformed
+
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+        // TODO add your handling code here:
+        LABEL_NOMBRE.setVisible(false);
+        LABEL_QUE_TIENE.setVisible(false);
+        LABEL_CARACTERISTICA.setVisible(false);
+        textoNombre.setVisible(false);
+        textoCaracteristica.setVisible(false);
+        botonAgregar.setVisible(false);
+        LPergunta.setText("queres jugar again");
+        BtnJugar.setVisible(true);
+        BtnJugar.setEnabled(true);
+        BtnSi.setVisible(false);
+        BtnSi.setEnabled(false);
+        BtnNo.setVisible(false);
+        BtnNo.setEnabled(false);
+        actual = 1;
+    }//GEN-LAST:event_botonAgregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,9 +352,15 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton BtnJugar;
     private javax.swing.JButton BtnNo;
     private javax.swing.JButton BtnSi;
+    private javax.swing.JLabel LABEL_CARACTERISTICA;
+    private javax.swing.JLabel LABEL_NOMBRE;
+    private javax.swing.JLabel LABEL_QUE_TIENE;
     private javax.swing.JLabel LImagem;
     private javax.swing.JLabel LPergunta;
+    private javax.swing.JButton botonAgregar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField textoCaracteristica;
+    private javax.swing.JTextField textoNombre;
     // End of variables declaration//GEN-END:variables
 }

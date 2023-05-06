@@ -18,7 +18,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-117,0,0,7,-128"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,56,0,0,10,-31"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
@@ -39,17 +39,43 @@
               <Component id="LPergunta" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="BtnSi" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="BtnIniciar" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="LABEL_QUE_TIENE" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="LABEL_NOMBRE" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textoNombre" min="-2" pref="216" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="LABEL_CARACTERISTICA" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textoCaracteristica" min="-2" pref="427" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="LImagem" min="-2" pref="1215" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="421" max="-2" attributes="0"/>
+                                          <Component id="botonAgregar" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="BtnSi" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="454" max="-2" attributes="0"/>
+                                  <Component id="BtnIniciar" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                           <Component id="BtnJugar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
                           <Component id="BtnNo" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="LImagem" min="-2" pref="1215" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
               </Group>
@@ -61,8 +87,22 @@
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="LPergunta" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="LImagem" min="-2" pref="800" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="LImagem" min="-2" pref="800" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="LABEL_NOMBRE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="LABEL_QUE_TIENE" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="LABEL_CARACTERISTICA" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoCaracteristica" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonAgregar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="BtnIniciar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="BtnSi" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
@@ -131,6 +171,40 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnSiActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LABEL_NOMBRE">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre del campeon"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LABEL_QUE_TIENE">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#xbf;Que tiene su campeon que no tenga [NOMBRE DEL CAMPEON ADIVINADO]?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LABEL_CARACTERISTICA">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Su personaje es..."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoCaracteristica">
+          <Properties>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNombre">
+          <Properties>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonAgregar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Agregar"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAgregarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
