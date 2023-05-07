@@ -2,11 +2,8 @@ package akinatorlol;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-<<<<<<< HEAD
 import java.util.HashSet;
 import java.util.Set;
-=======
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
 import javafx.scene.layout.Background;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -14,11 +11,6 @@ import javax.swing.JPanel;
 
 
 public class Interface extends javax.swing.JFrame {
-<<<<<<< HEAD
-=======
-
-    
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
     Nodo nodo;
     Conexion con;
     Connection conn;
@@ -38,17 +30,9 @@ public class Interface extends javax.swing.JFrame {
         LABEL_NOMBRE.setVisible(false);
         LABEL_QUE_TIENE.setVisible(false);
         LABEL_CARACTERISTICA.setVisible(false);
-<<<<<<< HEAD
         textoCaracteristica.setVisible(false);
         textoNombre.setVisible(false);
         botonAgregar.setVisible(false);    
-=======
-        textoNombre.setVisible(false);
-        textoCaracteristica.setVisible(false);
-        botonAgregar.setVisible(false);
-        
-        
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
     }
 
     /**
@@ -70,15 +54,7 @@ public class Interface extends javax.swing.JFrame {
         BtnIniciar = new javax.swing.JButton();
         BtnNo = new javax.swing.JButton();
         BtnSi = new javax.swing.JButton();
-<<<<<<< HEAD
         BtnJugar = new javax.swing.JButton();
-=======
-        LABEL_NOMBRE = new javax.swing.JLabel();
-        LABEL_QUE_TIENE = new javax.swing.JLabel();
-        LABEL_CARACTERISTICA = new javax.swing.JLabel();
-        textoCaracteristica = new javax.swing.JTextField();
-        textoNombre = new javax.swing.JTextField();
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
         botonAgregar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -149,7 +125,6 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(BtnSi);
         BtnSi.setBounds(320, 480, 70, 40);
 
-<<<<<<< HEAD
         BtnJugar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         BtnJugar.setText("Jugar Nuevamente");
         BtnJugar.setEnabled(false);
@@ -160,17 +135,6 @@ public class Interface extends javax.swing.JFrame {
         });
         jPanel1.add(BtnJugar);
         BtnJugar.setBounds(450, 530, 192, 31);
-=======
-        LABEL_NOMBRE.setText("Nombre del campeon");
-
-        LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga [NOMBRE DEL CAMPEON ADIVINADO]?");
-
-        LABEL_CARACTERISTICA.setText("Su personaje es...");
-
-        textoCaracteristica.setEnabled(false);
-
-        textoNombre.setEnabled(false);
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
 
         botonAgregar.setText("Agregar");
         botonAgregar.setEnabled(false);
@@ -179,7 +143,6 @@ public class Interface extends javax.swing.JFrame {
                 botonAgregarActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
         jPanel1.add(botonAgregar);
         botonAgregar.setBounds(580, 140, 82, 100);
         jPanel1.add(jLabel1);
@@ -194,77 +157,11 @@ public class Interface extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LPergunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LABEL_QUE_TIENE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(LABEL_NOMBRE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(LABEL_CARACTERISTICA)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textoCaracteristica, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(421, 421, 421)
-                                        .addComponent(botonAgregar))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(454, 454, 454)
-                                .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(59, 59, 59)
-                        .addComponent(BtnJugar)
-                        .addGap(308, 308, 308)
-                        .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(346, 346, 346))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(LPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(LABEL_NOMBRE)
-                        .addComponent(textoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LABEL_QUE_TIENE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LABEL_CARACTERISTICA)
-                    .addComponent(textoCaracteristica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonAgregar))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnSi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnNo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
         // TODO:
         // - Hacer SELECT en la db, desplegar y guardar su nodo
@@ -318,17 +215,6 @@ public class Interface extends javax.swing.JFrame {
 
         if (nodo.getPregunta() == 0){
             LPergunta.setText("¡Gane!, ¿Quieres jugar de nuevo?");
-=======
-    private void BtnSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiActionPerformed
-        // TODO:
-        // -Guardar id del nodo izquierdo
-        // -Si es una pregunta, desplegarla y continuar
-        // -Si es un personaje, desplegar y preguntar si es el correcto
-        //   * Si es el correcto, preguntar si se quiere volver a jugar
-        //   * Si no, pedir datos y hacer INSERT en la db
-        if (nodo.getPregunta() == 0){
-            LPergunta.setText("wow que loco gane que crack queres jugar again");
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
             BtnJugar.setVisible(true);
             BtnJugar.setEnabled(true);
             BtnSi.setVisible(false);
@@ -350,11 +236,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnSiActionPerformed
 
     private void BtnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnJugarActionPerformed
-<<<<<<< HEAD
         
-=======
-        // Nada, creo
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
         BtnIniciar.setEnabled(true);
         BtnIniciar.setVisible(true);
         BtnJugar.setVisible(false);
@@ -362,7 +244,6 @@ public class Interface extends javax.swing.JFrame {
         LPergunta.setText("");
     }//GEN-LAST:event_BtnJugarActionPerformed
 
-<<<<<<< HEAD
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
      
         LABEL_NOMBRE.setVisible(false);
@@ -371,75 +252,12 @@ public class Interface extends javax.swing.JFrame {
         textoCaracteristica.setVisible(false);
         textoNombre.setVisible(false);
         botonAgregar.setVisible(false);
-=======
-    private void BtnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoActionPerformed
-        // TODO:
-        // -Lo mismo que en el BtnSiActionPerformed, pero con el nodo derecho
-        if (nodo.getPregunta() == 0){
-            LPergunta.setText("nopuedesir, mete el mono al db");
-            BtnSi.setVisible(false);
-            BtnSi.setEnabled(false);
-            BtnNo.setVisible(false);
-            BtnNo.setEnabled(false);
-            LABEL_NOMBRE.setVisible(true);
-            LABEL_QUE_TIENE.setVisible(true);
-            LABEL_CARACTERISTICA.setVisible(true);
-            textoNombre.setVisible(true);
-            textoCaracteristica.setVisible(true);
-            botonAgregar.setVisible(true);
-            textoNombre.setEnabled(true);
-            textoCaracteristica.setEnabled(true);
-            botonAgregar.setEnabled(true);
-            LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga " + nodo.getTexto() + "?");
-            //actual = 1;
-        }
-        else{
-            try{
-                actual = actual * 2 + 1;
-                db.Select(conn, nodo, actual);
-                LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
-            }
-            catch(SQLException ex){
-                
-            }
-        }
-    }//GEN-LAST:event_BtnNoActionPerformed
-
-    private void BtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIniciarActionPerformed
-        // TODO:
-        // - Hacer SELECT en la db, desplegar y guardar su nodo
-        try{
-            BtnSi.setEnabled(true);
-            BtnSi.setVisible(true);
-            BtnNo.setEnabled(true);
-            BtnNo.setVisible(true);
-            BtnIniciar.setEnabled(false);
-            BtnIniciar.setVisible(false);
-            db.Select(conn, nodo, actual);
-            LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
-        }
-        catch(SQLException ex){
-
-        }
-    }//GEN-LAST:event_BtnIniciarActionPerformed
-
-    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-        // TODO add your handling code here:
-        LABEL_NOMBRE.setVisible(false);
-        LABEL_QUE_TIENE.setVisible(false);
-        LABEL_CARACTERISTICA.setVisible(false);
-        textoNombre.setVisible(false);
-        textoCaracteristica.setVisible(false);
-        botonAgregar.setVisible(false);
-        LPergunta.setText("queres jugar again");
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
         BtnJugar.setVisible(true);
         BtnJugar.setEnabled(true);
         BtnSi.setVisible(false);
         BtnSi.setEnabled(false);
         BtnNo.setVisible(false);
         BtnNo.setEnabled(false);
-<<<<<<< HEAD
         
         try{
             nodo.setId(actual * 2 + 1);
@@ -458,8 +276,6 @@ public class Interface extends javax.swing.JFrame {
             return;
         }
         LPergunta.setText("¿Quieres jugar de nuevo?");
-=======
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
         actual = 1;
     }//GEN-LAST:event_botonAgregarActionPerformed
 
@@ -507,10 +323,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel LABEL_CARACTERISTICA;
     private javax.swing.JLabel LABEL_NOMBRE;
     private javax.swing.JLabel LABEL_QUE_TIENE;
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel LImagem;
->>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
     private javax.swing.JLabel LPergunta;
     private javax.swing.JButton botonAgregar;
     private javax.swing.JLabel jLabel1;
