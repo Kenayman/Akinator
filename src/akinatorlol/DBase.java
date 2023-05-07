@@ -27,6 +27,7 @@ public class DBase {
             nodo.setPregunta(rs.getInt(3));
         }
     }
+<<<<<<< HEAD
     
     public void Alter(Connection conn, Nodo nodo, int id) throws SQLException{
         PreparedStatement stmt1 = conn.prepareStatement(
@@ -37,4 +38,6 @@ public class DBase {
         stmt1.setInt(4, id);
         stmt1.executeUpdate();
     }
+=======
+>>>>>>> ff1172a8ed5c6276f5bd26d518ba2858ca9abadc
 }
