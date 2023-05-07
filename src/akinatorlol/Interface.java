@@ -2,8 +2,11 @@ package akinatorlol;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Set;
 import javafx.scene.layout.Background;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -27,8 +30,8 @@ public class Interface extends javax.swing.JFrame {
         LABEL_NOMBRE.setVisible(false);
         LABEL_QUE_TIENE.setVisible(false);
         LABEL_CARACTERISTICA.setVisible(false);
-        textoNombre.setVisible(false);
         textoCaracteristica.setVisible(false);
+        textoNombre.setVisible(false);
         botonAgregar.setVisible(false);    
     }
 
@@ -46,8 +49,8 @@ public class Interface extends javax.swing.JFrame {
         LABEL_CARACTERISTICA = new javax.swing.JLabel();
         LABEL_QUE_TIENE = new javax.swing.JLabel();
         LABEL_NOMBRE = new javax.swing.JLabel();
-        textoNombre = new javax.swing.JTextField();
         textoCaracteristica = new javax.swing.JTextField();
+        textoNombre = new javax.swing.JTextField();
         BtnIniciar = new javax.swing.JButton();
         BtnNo = new javax.swing.JButton();
         BtnSi = new javax.swing.JButton();
@@ -67,7 +70,7 @@ public class Interface extends javax.swing.JFrame {
 
         LABEL_CARACTERISTICA.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         LABEL_CARACTERISTICA.setForeground(new java.awt.Color(255, 255, 255));
-        LABEL_CARACTERISTICA.setText("Su personaje es...");
+        LABEL_CARACTERISTICA.setText("Caracteristica");
         jPanel1.add(LABEL_CARACTERISTICA);
         LABEL_CARACTERISTICA.setBounds(90, 140, 230, 50);
 
@@ -82,13 +85,13 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(LABEL_NOMBRE);
         LABEL_NOMBRE.setBounds(40, 200, 250, 30);
 
-        textoNombre.setEnabled(false);
-        jPanel1.add(textoNombre);
-        textoNombre.setBounds(300, 140, 270, 40);
-
         textoCaracteristica.setEnabled(false);
         jPanel1.add(textoCaracteristica);
-        textoCaracteristica.setBounds(300, 200, 230, 30);
+        textoCaracteristica.setBounds(300, 140, 270, 40);
+
+        textoNombre.setEnabled(false);
+        jPanel1.add(textoNombre);
+        textoNombre.setBounds(300, 200, 230, 30);
 
         BtnIniciar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         BtnIniciar.setText("INICIAR");
@@ -141,9 +144,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonAgregar);
-        botonAgregar.setBounds(580, 140, 74, 100);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kenny\\OneDrive\\Documents\\GitHub\\Akinator\\League\\Lol Fundo.jpg")); // NOI18N
+        botonAgregar.setBounds(580, 140, 82, 100);
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1020, 580);
 
@@ -180,10 +181,9 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnIniciarActionPerformed
 
     private void BtnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNoActionPerformed
-        // TODO:
-        // -Lo mismo que en el BtnSiActionPerformed, pero con el nodo derecho
+
         if (nodo.getPregunta() == 0){
-            LPergunta.setText("nopuedesir, mete el mono al db");
+            LPergunta.setText("No conozco a tu campeon... hablame sobre el");
             BtnSi.setVisible(false);
             BtnSi.setEnabled(false);
             BtnNo.setVisible(false);
@@ -191,20 +191,19 @@ public class Interface extends javax.swing.JFrame {
             LABEL_NOMBRE.setVisible(true);
             LABEL_QUE_TIENE.setVisible(true);
             LABEL_CARACTERISTICA.setVisible(true);
-            textoNombre.setVisible(true);
             textoCaracteristica.setVisible(true);
+            textoNombre.setVisible(true);
             botonAgregar.setVisible(true);
-            textoNombre.setEnabled(true);
             textoCaracteristica.setEnabled(true);
+            textoNombre.setEnabled(true);
             botonAgregar.setEnabled(true);
             LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga " + nodo.getTexto() + "?");
-            //actual = 1;
         }
         else{
             try{
                 actual = actual * 2 + 1;
                 db.Select(conn, nodo, actual);
-                LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?"); // PONER LA PREGUNTA
+                LPergunta.setText("¿Su personaje es " + nodo.getTexto() + "?");
             }
             catch(SQLException ex){
 
@@ -213,14 +212,9 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnNoActionPerformed
 
     private void BtnSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSiActionPerformed
-        // TODO:
-        // -Guardar id del nodo izquierdo
-        // -Si es una pregunta, desplegarla y continuar
-        // -Si es un personaje, desplegar y preguntar si es el correcto
-        //   * Si es el correcto, preguntar si se quiere volver a jugar
-        //   * Si no, pedir datos y hacer INSERT en la db
+
         if (nodo.getPregunta() == 0){
-            LPergunta.setText("wow que loco gane que crack queres jugar again");
+            LPergunta.setText("¡Gane!, ¿Quieres jugar de nuevo?");
             BtnJugar.setVisible(true);
             BtnJugar.setEnabled(true);
             BtnSi.setVisible(false);
@@ -242,7 +236,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnSiActionPerformed
 
     private void BtnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnJugarActionPerformed
-        // Nada, creo
+        
         BtnIniciar.setEnabled(true);
         BtnIniciar.setVisible(true);
         BtnJugar.setVisible(false);
@@ -251,20 +245,37 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnJugarActionPerformed
 
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-        // TODO add your handling code here:
+     
         LABEL_NOMBRE.setVisible(false);
         LABEL_QUE_TIENE.setVisible(false);
         LABEL_CARACTERISTICA.setVisible(false);
-        textoNombre.setVisible(false);
         textoCaracteristica.setVisible(false);
+        textoNombre.setVisible(false);
         botonAgregar.setVisible(false);
-        LPergunta.setText("queres jugar again");
         BtnJugar.setVisible(true);
         BtnJugar.setEnabled(true);
         BtnSi.setVisible(false);
         BtnSi.setEnabled(false);
         BtnNo.setVisible(false);
         BtnNo.setEnabled(false);
+        
+        try{
+            nodo.setId(actual * 2 + 1);
+            db.Alter(conn, nodo, actual);
+            nodo.setId(actual);
+            nodo.setTexto(textoCaracteristica.getText());
+            nodo.setPregunta(1);
+            db.Insert(conn, nodo);
+            nodo.setId(actual * 2);
+            nodo.setTexto(textoNombre.getText());
+            nodo.setPregunta(0);
+            db.Insert(conn, nodo);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No dejes campos vacios");
+            return;
+        }
+        LPergunta.setText("¿Quieres jugar de nuevo?");
         actual = 1;
     }//GEN-LAST:event_botonAgregarActionPerformed
 

@@ -27,4 +27,14 @@ public class DBase {
             nodo.setPregunta(rs.getInt(3));
         }
     }
+    
+    public void Alter(Connection conn, Nodo nodo, int id) throws SQLException{
+        PreparedStatement stmt1 = conn.prepareStatement(
+                "UPDATE arbol SET nodo = ?, texto = ?, pregunta = ? WHERE nodo = ?");
+        stmt1.setInt(1, nodo.getId());
+        stmt1.setString(2, nodo.getTexto());
+        stmt1.setInt(3, nodo.getPregunta());
+        stmt1.setInt(4, id);
+        stmt1.executeUpdate();
+    }
 }
