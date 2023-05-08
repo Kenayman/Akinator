@@ -63,6 +63,7 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         LPergunta.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        LPergunta.setForeground(new java.awt.Color(255, 0, 153));
         LPergunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LPergunta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel1.add(LPergunta);
@@ -75,7 +76,7 @@ public class Interface extends javax.swing.JFrame {
         LABEL_CARACTERISTICA.setBounds(90, 140, 230, 50);
 
         LABEL_QUE_TIENE.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        LABEL_QUE_TIENE.setForeground(new java.awt.Color(0, 0, 0));
+        LABEL_QUE_TIENE.setForeground(new java.awt.Color(255, 51, 102));
         LABEL_QUE_TIENE.setText("¿Que tiene su campeon que no tenga [NOMBRE DEL CAMPEON ADIVINADO]?");
         jPanel1.add(LABEL_QUE_TIENE);
         LABEL_QUE_TIENE.setBounds(20, 80, 920, 70);
@@ -144,7 +145,9 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonAgregar);
-        botonAgregar.setBounds(580, 140, 82, 100);
+        botonAgregar.setBounds(580, 140, 74, 100);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/Lol Fundo.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1020, 580);
 
